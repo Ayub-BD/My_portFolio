@@ -31,7 +31,7 @@
        2. Verify the following three values are still correct:
        */
     const EMAILJS_PUBLIC_KEY  = "b_XICBiaTMdjejEmd";   // <-- EmailJS Public Key
-    const EMAILJS_SERVICE_ID   = "service_5h12h9e";      // <-- EmailJS Service ID
+    const EMAILJS_SERVICE_ID   = "service_w00v76p";      // <-- EmailJS Service ID
     const EMAILJS_TEMPLATE_ID  = "template_jhr1wom";    // <-- EmailJS Template ID
     const PERSONAL_EMAIL       = "abuayubminhaz290@gmail.com"; // <-- your inbox
     /*
