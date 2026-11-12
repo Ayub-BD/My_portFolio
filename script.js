@@ -427,6 +427,11 @@
             try {
                 // Parameters that map to the EmailJS template variables
                 const params = {
+                    // Names used by your EmailJS template ("Contact Us")
+                    user_name: nameField.value.trim(),
+                    user_email: emailField.value.trim(),
+                    user_message: messageField.value.trim(),
+                    // Same values under the older names, so either template works
                     from_name: nameField.value.trim(),
                     from_email: emailField.value.trim(),
                     message: messageField.value.trim(),
