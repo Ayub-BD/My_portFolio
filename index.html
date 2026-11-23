@@ -1,657 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Abu Ayub Bhuiyan - CSE student at BAIUST, web developer and creative programmer from Comilla, Bangladesh." />
-    <meta name="author" content="Abu Ayub Bhuiyan" />
-    <title>Abu Ayub Bhuiyan | Portfolio</title>
-
-    <!-- Google Fonts: Poppins for body, Outfit for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-    <!-- EmailJS SDK (for the contact form) -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <!-- My stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2319c6a0'/%3E%3Ctext x='50' y='68' font-size='60' font-family='Outfit,sans-serif' font-weight='800' fill='%2304211b' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abu Ayub Bhuiyan — Web Developer</title>
+<meta name="description" content="Portfolio of Abu Ayub Bhuiyan, CSE student and web developer from Comilla, Bangladesh.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234b0d16'/%3E%3Ctext x='32' y='45' font-size='34' font-weight='800' font-family='Arial' fill='%23ffb88a' text-anchor='middle'%3EA%3C/text%3E%3Ccircle cx='51' cy='13' r='5' fill='%2319e6ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="bar"></div><div id="cur"></div>
 
-    <!-- ===================== ANIMATED BACKGROUND ===================== -->
-    <div class="bg-animation" aria-hidden="true">
-        <div class="bg-gradient"></div>
-        <canvas id="particles-canvas"></canvas>
-        <div class="bg-shape shape-1"></div>
-        <div class="bg-shape shape-2"></div>
-        <div class="bg-shape shape-3"></div>
-        <div class="bg-shape shape-4"></div>
+<header>
+  <a href="#home"><span class="dot"></span>Open to work</a>
+  <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+</header>
+
+<section id="home">
+  <h1 aria-label="Abu Ayub Bhuiyan">
+    <span class="l" data-split>Abu</span>
+    <span class="l o" data-split>Ayub</span>
+    <span class="l" data-split>Bhuiyan</span>
+  </h1>
+  <div class="meta">
+    <p class="role">I build <span id="role">clean websites</span></p>
+    <div class="cta"><a class="btn f" href="#work" data-mag>See my work</a><a class="btn" href="#contact" data-mag>Say hello</a></div>
+  </div>
+  <div class="mq" aria-hidden="true"><div id="mq"><span>HTML</span><span>✦</span><span>CSS</span><span>✦</span><span>JavaScript</span><span>✦</span><span>C</span><span>✦</span><span>C++</span><span>✦</span><span>Python</span><span>✦</span><span>Django</span><span>✦</span></div></div>
+</section>
+
+<section id="about">
+  <div class="abt">
+    <div class="rv"><div class="ph">A·A<img src="pic/my-pic.jpg" alt="Abu Ayub Bhuiyan" onerror="this.remove()"></div></div>
+    <div>
+      <p class="lab rv">(01) About</p>
+      <p class="big rv" style="--d:.1s">I’m a CSE student at BAIUST in Comilla who turns ideas into <em>clean, fast and friendly</em> interfaces. I started with C, moved through C++ and Python, and now build for the web with JavaScript and Django.</p>
+      <div class="info rv" style="--d:.2s">
+        <div><small>Studying</small>B.Sc. CSE, BAIUST</div>
+        <div><small>Based in</small>Comilla, Bangladesh</div>
+        <div><small>Focus</small>Front-end &amp; Django</div>
+      </div>
+      <div class="stats rv" style="--d:.25s">
+        <div><b data-to="6">0</b><span>Core skills</span></div>
+        <div><b data-to="4">0</b><span>Projects built</span></div>
+        <div><b data-to="1">0</b><span>Live client site</span></div>
+      </div>
+      <a class="btn f rv" href="assets/Abu_Ayub_CV.pdf" data-mag>Download resume ↓</a>
     </div>
+  </div>
+</section>
 
-    <!-- ===================== NAVIGATION BAR ===================== -->
-    <header class="navbar" id="navbar">
-        <nav class="nav-container" aria-label="Primary navigation">
-            <!-- Logo / Name on the left -->
-            <a href="#home" class="nav-logo">
-                <span class="logo-mark">A</span>
-                <span class="logo-text">Abu Ayub<span class="logo-dot">.</span></span>
-            </a>
+<section id="skills">
+  <p class="lab rv">(02) Skills</p>
+  <h2 class="rv">What I<br>work with</h2>
+  <div class="sk rv" style="--p:.9"><b>HTML</b><p>Semantic, accessible markup.</p><div class="ln"><i></i></div><em>90%</em></div>
+  <div class="sk rv" style="--p:.85"><b>CSS</b><p>Flexbox, Grid and smooth animation.</p><div class="ln"><i></i></div><em>85%</em></div>
+  <div class="sk rv" style="--p:.8"><b>C</b><p>Fundamentals and problem solving.</p><div class="ln"><i></i></div><em>80%</em></div>
+  <div class="sk rv" style="--p:.75"><b>JavaScript</b><p>Interactive vanilla JS interfaces.</p><div class="ln"><i></i></div><em>75%</em></div>
+  <div class="sk rv" style="--p:.7"><b>C++</b><p>OOP and data structures.</p><div class="ln"><i></i></div><em>70%</em></div>
+  <div class="sk rv" style="--p:.65"><b>Python</b><p>Scripting, automation and Django.</p><div class="ln"><i></i></div><em>65%</em></div>
+</section>
 
-            <!-- Desktop navigation links -->
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+<section id="work">
+  <p class="lab rv">(03) Selected work</p>
+  <h2 class="rv">Projects</h2>
+  <article class="pr open rv">
+    <button class="ph2"><span>01</span><h3>Gear Up Moto</h3><small>Full-stack</small><div class="ar">+</div></button>
+    <div class="pb"><div><div class="in2"><i></i><div><p>A full-stack e-commerce and service-booking site for a motorcycle parts and servicing business in Cumilla, with a product catalog, cart, checkout and booking system.</p><div class="tags"><b>Django</b><b>Python</b><b>HTML</b><b>CSS</b><b>JavaScript</b></div><div class="links"><a href="https://gearupmotocumilla.com/" target="_blank" rel="noopener">Live site ↗</a><a href="https://github.com/Ayub-BD" target="_blank" rel="noopener">Code ↗</a></div></div></div></div></div>
+  </article>
+  <article class="pr rv">
+    <button class="ph2"><span>02</span><h3>HealthCare Help Center</h3><small>Front-end</small><div class="ar">+</div></button>
+    <div class="pb"><div><div class="in2"><i></i><div><p>A responsive help-center page for a healthcare service with information sections, FAQs and a clean modern interface.</p><div class="tags"><b>HTML</b><b>CSS</b><b>JavaScript</b></div><div class="links"><a href="https://github.com/Ayub-BD" target="_blank" rel="noopener">Code ↗</a></div></div></div></div></div>
+  </article>
+  <article class="pr rv">
+    <button class="ph2"><span>03</span><h3>Palette Generator</h3><small>Web tool</small><div class="ar">+</div></button>
+    <div class="pb"><div><div class="in2"><i></i><div><p>A vanilla JS tool that generates random color palettes, copies hex codes in one click and lets you lock your favorites.</p><div class="tags"><b>HTML</b><b>CSS</b><b>JavaScript</b></div><div class="links"><a href="https://github.com/Ayub-BD" target="_blank" rel="noopener">Code ↗</a></div></div></div></div></div>
+  </article>
+  <article class="pr rv" style="border-bottom:2px solid var(--ox2)">
+    <button class="ph2"><span>04</span><h3>Modern Landing Page</h3><small>Front-end</small><div class="ar">+</div></button>
+    <div class="pb"><div><div class="in2"><i></i><div><p>A fully responsive landing page with a hero section, smooth scrolling and animated interface elements.</p><div class="tags"><b>HTML</b><b>CSS</b><b>JavaScript</b></div><div class="links"><a href="https://github.com/Ayub-BD" target="_blank" rel="noopener">Code ↗</a></div></div></div></div></div>
+  </article>
+</section>
 
-            <!-- Mobile hamburger menu -->
-            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </nav>
-    </header>
+<section id="journey">
+  <p class="lab rv">(04) Journey</p>
+  <h2 class="rv">Milestones</h2>
+  <div class="jr rv"><span>Now</span><div><h3>B.Sc. in CSE — BAIUST</h3><p>Studying Computer Science &amp; Engineering in Comilla while building real projects.</p></div></div>
+  <div class="jr rv"><span>2024</span><div><h3>Web Development Certificate</h3><p>Structured course covering HTML, CSS and JavaScript.</p></div></div>
+  <div class="jr rv"><span>2024</span><div><h3>Programming Contest</h3><p>Took part in an intra-university contest focused on algorithmic problem solving.</p></div></div>
+  <div class="jr rv"><span>2023</span><div><h3>Top Performer — C Fundamentals</h3><p>Recognized among the top performers in the C Programming course.</p></div></div>
+  <div class="jr rv"><span>2022</span><div><h3>HSC, Science Group</h3><p>Completed higher secondary education with a strong result.</p></div></div>
+</section>
 
-    <main>
+<section id="contact">
+  <p class="lab rv">(05) Contact</p>
+  <a class="mail rv" href="mailto:abuayubminhaz290@gmail.com">abuayubminhaz290@gmail.com</a>
+  <div class="cg">
+    <div class="rv">
+      <h3>Have a project in mind? Let’s make it real.</h3>
+      <ul>
+        <li><small>Phone</small><a href="tel:+8801406785952">+880 1406-785952</a></li>
+        <li><small>GitHub</small><a href="https://github.com/Ayub-BD" target="_blank" rel="noopener">github.com/Ayub-BD</a></li>
+        <li><small>LinkedIn</small><a href="https://www.linkedin.com/in/abu-ayub-bhuyan-376840356/" target="_blank" rel="noopener">Abu Ayub Bhuyan</a></li>
+        <li><small>Facebook</small><a href="https://www.facebook.com/AbuAyubMinhaz" target="_blank" rel="noopener">AbuAyubMinhaz</a></li>
+      </ul>
+    </div>
+    <form id="form" class="rv" style="--d:.1s">
+      <div><label for="n">Your name</label><input id="n" required></div>
+      <div><label for="e">Your email</label><input id="e" type="email" required></div>
+      <div><label for="m">Message</label><textarea id="m" rows="4" required></textarea></div>
+      <button type="submit" data-mag>Send message →</button>
+      <p id="msg" role="status"></p>
+    </form>
+  </div>
+  <footer><span>© 2026 Abu Ayub Bhuiyan</span><span>Comilla, Bangladesh</span><a href="#home">Back to top ↑</a></footer>
+</section>
 
-        <!-- ===================== HERO / HOME SECTION ===================== -->
-        <section class="hero" id="home">
-            <div class="hero-container">
-
-                <!-- Profile picture in an animated frame -->
-                <div class="hero-image-wrap reveal" data-reveal="fade-down">
-                    <div class="image-ring"></div>
-                    <div class="image-frame">
-                        <img src="pic/my-pic.jpg" alt="Abu Ayub Bhuiyan" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%2319c6a0%22/%3E%3Cstop offset=%221%22 stop-color=%22%23f5c542%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22400%22 height=%22400%22 fill=%22url(%23g)%22/%3E%3Ctext x=%22200%22 y=%22230%22 font-size=%22120%22 font-family=%22Outfit,sans-serif%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22%3EA%3C/text%3E%3C/svg%3E';" />
-                    </div>
-                    <!-- Small floating badges -->
-                    <span class="floating-badge badge-1"><i class="fa-brands fa-html5"></i></span>
-                    <span class="floating-badge badge-2"><i class="fa-brands fa-js"></i></span>
-                    <span class="floating-badge badge-3"><i class="fa-solid fa-code"></i></span>
-                </div>
-
-                <!-- Hero text content -->
-                <div class="hero-content">
-                    <p class="hero-greeting reveal" data-reveal="fade-up">
-                        <span class="wave">👋</span> Hi, I'm
-                    </p>
-                    <h1 class="hero-name reveal" data-reveal="fade-up" data-delay="100">
-                        Abu Ayub Bhuiyan
-                    </h1>
-
-                    <!-- Animated typing text -->
-                    <h2 class="hero-typed reveal" data-reveal="fade-up" data-delay="200">
-                        <span class="typed-prefix">I'm a </span>
-                        <span class="typed-text" id="typed-text"></span>
-                        <span class="typed-cursor">|</span>
-                    </h2>
-
-                    <p class="hero-intro reveal" data-reveal="fade-up" data-delay="300">
-                        A passionate Computer Science &amp; Engineering student at BAIUST, Comilla,
-                        dedicated to crafting clean, responsive, and user-friendly web experiences.
-                        Always learning, always building.
-                    </p>
-
-                    <!-- CTA buttons -->
-                    <div class="hero-buttons reveal" data-reveal="fade-up" data-delay="400">
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fa-solid fa-rocket"></i> View My Work
-                        </a>
-                        <a href="#contact" class="btn btn-ghost">
-                            <i class="fa-solid fa-paper-plane"></i> Contact Me
-                        </a>
-                    </div>
-
-                    <!-- Social icons -->
-                    <div class="hero-social reveal" data-reveal="fade-up" data-delay="500">
-                        <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/abu-ayub-bhuyan-376840356/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.facebook.com/AbuAyubMinhaz" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="mailto:abuayubminhaz290@gmail.com" aria-label="Email" class="social-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Scroll-down indicator -->
-            <!-- <a href="#about" class="scroll-down" aria-label="Scroll to About">
-                <span class="mouse"><span class="wheel"></span></span>
-                <span class="scroll-text">Scroll</span>
-            </a> -->
-        </section>
-
-
-        <!-- ===================== ABOUT SECTION ===================== -->
-        <section class="section about" id="about">
-            <div class="container">
-                <div class="section-head reveal" data-reveal="fade-up">
-                    <!-- <span class="section-tag">01 — About</span> -->
-                    <h2 class="section-title">About <span class="accent">Me</span></h2>
-                    <p class="section-sub">A short story of who I am and what I do.</p>
-                </div>
-
-                <div class="about-grid">
-                    <!-- Left: portrait / image card -->
-                    <div class="about-image reveal" data-reveal="fade-right">
-                        <div class="about-image-card">
-                            <img src="pic/my-pic2.jpeg" alt="Abu Ayub Bhuiyan portrait" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 480%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%2319c6a0%22/%3E%3Cstop offset=%221%22 stop-color=%22%23f5c542%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22400%22 height=%22480%22 fill=%22url(%23g)%22/%3E%3Ctext x=%22200%22 y=%22260%22 font-size=%22140%22 font-family=%22Outfit,sans-serif%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22%3EA%3C/text%3E%3C/svg%3E';" />
-                        </div>
-                        <div class="about-image-glow"></div>
-                    </div>
-
-                    <!-- Right: about text + info cards + resume button -->
-                    <div class="about-content">
-                        <h3 class="reveal" data-reveal="fade-up">
-                            CSE Student &amp; Aspiring Web Developer
-                        </h3>
-                        <p class="reveal" data-reveal="fade-up" data-delay="100">
-                            I'm <strong>Abu Ayub Bhuiyan</strong>, a Computer Science &amp; Engineering student at
-                            <strong>Bangladesh Army International University of Science and Technology (BAIUST)</strong>,
-                            located in Comilla, Bangladesh. I'm passionate about technology, problem solving, and
-                            creating meaningful digital experiences.
-                        </p>
-                        <p class="reveal" data-reveal="fade-up" data-delay="200">
-                            My programming journey began with C, then expanded to C++, Python, and JavaScript.
-                            I'm now focused on front-end web development and the Django framework, building small
-                            but polished projects to sharpen my skills. I love turning ideas into clean, functional
-                            and beautiful interfaces.
-                        </p>
-
-                        <!-- Quick info grid -->
-                        <div class="about-info">
-                            <div class="info-item reveal" data-reveal="fade-up" data-delay="300">
-                                <i class="fa-solid fa-user"></i>
-                                <div><span>Name</span><strong>Abu Ayub Bhuiyan</strong></div>
-                            </div>
-                            <div class="info-item reveal" data-reveal="fade-up" data-delay="350">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                                <div><span>University</span><strong>BAIUST, Comilla</strong></div>
-                            </div>
-                            <div class="info-item reveal" data-reveal="fade-up" data-delay="400">
-                                <i class="fa-solid fa-laptop-code"></i>
-                                <div><span>Focus</span><strong>Web Development</strong></div>
-                            </div>
-                            <div class="info-item reveal" data-reveal="fade-up" data-delay="450">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <div><span>Location</span><strong>Comilla, Bangladesh</strong></div>
-                            </div>
-                            <div class="info-item reveal" data-reveal="fade-up" data-delay="500">
-                                <i class="fa-solid fa-phone"></i>
-                                <div><span>Phone</span><strong>+880 1406-785952</strong></div>
-                            </div>
-                            <div class="info-item reveal" data-reveal="fade-up" data-delay="550">
-                                <i class="fa-solid fa-envelope"></i>
-                                <div><span>Email</span><strong>abuayubminhaz290@gmail.com</strong></div>
-                            </div>
-                        </div>
-
-                        <!-- Education timeline -->
-                        <div class="about-timeline reveal" data-reveal="fade-up" data-delay="600">
-                            <h4><i class="fa-solid fa-timeline"></i> Education</h4>
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-card glass">
-                                        <span class="timeline-year">Present</span>
-                                        <h5>B.Sc. in Computer Science &amp; Engineering</h5>
-                                        <p>BAIUST — Bangladesh Army International University of Science and Technology, Comilla.</p>
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <span class="timeline-dot"></span>
-                                    <div class="timeline-card glass">
-                                        <span class="timeline-year">Earlier</span>
-                                        <h5>Higher Secondary Certificate (HSC)</h5>
-                                        <p>Completed college education with a focus on Science group.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Download Resume button -->
-                        <div class="about-cta reveal" data-reveal="fade-up" data-delay="700">
-                            <!-- Replace the href with your actual resume file: assets/Abu_Ayub_CV.pdf -->
-                            <a href="assets/Abu_Ayub_CV.pdf" download class="btn btn-primary">
-                                <i class="fa-solid fa-download"></i> Download Resume
-                            </a>
-                            <a href="#contact" class="btn btn-ghost">
-                                <i class="fa-solid fa-arrow-right"></i> Get in Touch
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ===================== SKILLS SECTION ===================== -->
-        <section class="section skills" id="skills">
-            <div class="container">
-                <div class="section-head reveal" data-reveal="fade-up">
-                    <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
-                    <p class="section-sub">The technologies I work with every day.</p>
-                </div>
-
-                <div class="skills-grid">
-                    <!-- Skill Card: HTML -->
-                    <div class="skill-card glass reveal" data-reveal="fade-up">
-                        <div class="skill-icon html-icon"><i class="fa-brands fa-html5"></i></div>
-                        <h3 class="skill-name">HTML</h3>
-                        <p class="skill-desc">Semantic, accessible markup that structures the web.</p>
-                        <div class="skill-bar-wrap">
-                            <div class="skill-bar-meta"><span>Proficiency</span><span class="skill-percent">90%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card: CSS -->
-                    <div class="skill-card glass reveal" data-reveal="fade-up" data-delay="100">
-                        <div class="skill-icon css-icon"><i class="fa-brands fa-css3-alt"></i></div>
-                        <h3 class="skill-name">CSS</h3>
-                        <p class="skill-desc">Modern layouts with Flexbox, Grid, and animations.</p>
-                        <div class="skill-bar-wrap">
-                            <div class="skill-bar-meta"><span>Proficiency</span><span class="skill-percent">85%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card: JavaScript -->
-                    <div class="skill-card glass reveal" data-reveal="fade-up" data-delay="200">
-                        <div class="skill-icon js-icon"><i class="fa-brands fa-js"></i></div>
-                        <h3 class="skill-name">JavaScript</h3>
-                        <p class="skill-desc">Interactive UI logic and vanilla JS web apps.</p>
-                        <div class="skill-bar-wrap">
-                            <div class="skill-bar-meta"><span>Proficiency</span><span class="skill-percent">75%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card: C -->
-                    <div class="skill-card glass reveal" data-reveal="fade-up" data-delay="300">
-                        <div class="skill-icon c-icon"><i class="fa-solid fa-c"></i></div>
-                        <h3 class="skill-name">C</h3>
-                        <p class="skill-desc">Programming fundamentals and algorithmic thinking.</p>
-                        <div class="skill-bar-wrap">
-                            <div class="skill-bar-meta"><span>Proficiency</span><span class="skill-percent">80%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card: C++ -->
-                    <div class="skill-card glass reveal" data-reveal="fade-up" data-delay="400">
-                        <div class="skill-icon cpp-icon"><i class="fa-solid fa-plus"></i></div>
-                        <h3 class="skill-name">C++</h3>
-                        <p class="skill-desc">Object-oriented programming and data structures.</p>
-                        <div class="skill-bar-wrap">
-                            <div class="skill-bar-meta"><span>Proficiency</span><span class="skill-percent">70%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card: also learning -->
-                    <div class="skill-card glass reveal" data-reveal="fade-up" data-delay="500">
-                        <div class="skill-icon py-icon"><i class="fa-brands fa-python"></i></div>
-                        <h3 class="skill-name">Python</h3>
-                        <p class="skill-desc">Scripting, automation and Django web backend.</p>
-                        <div class="skill-bar-wrap">
-                            <div class="skill-bar-meta"><span>Proficiency</span><span class="skill-percent">65%</span></div>
-                            <div class="skill-bar"><div class="skill-fill" data-width="65%"></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ===================== ACHIEVEMENTS SECTION ===================== -->
-        <section class="section achievements" id="achievements">
-            <div class="container">
-                <div class="section-head reveal" data-reveal="fade-up">
-                    
-                    <h2 class="section-title">Achievements &amp; <span class="accent">Competitions</span></h2>
-                    <p class="section-sub">Milestones and certifications along the way. (Easy to update!)</p>
-                </div>
-
-                <div class="achievements-grid">
-                    <!-- Each card is easy to update — just duplicate to add a new one -->
-                    <div class="achievement-card glass reveal" data-reveal="fade-up">
-                        <div class="achievement-icon"><i class="fa-solid fa-trophy"></i></div>
-                        <div class="achievement-body">
-                            <span class="achievement-date">2024</span>
-                            <h3>Programming Contest Participant</h3>
-                            <p>Participated in an intra-university programming contest, sharpening algorithmic problem solving.</p>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card glass reveal" data-reveal="fade-up" data-delay="100">
-                        <div class="achievement-icon"><i class="fa-solid fa-certificate"></i></div>
-                        <div class="achievement-body">
-                            <span class="achievement-date">2024</span>
-                            <h3>Web Development Certificate</h3>
-                            <p>Completed a structured web development course covering HTML, CSS, and JavaScript.</p>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card glass reveal" data-reveal="fade-up" data-delay="200">
-                        <div class="achievement-icon"><i class="fa-solid fa-medal"></i></div>
-                        <div class="achievement-body">
-                            <span class="achievement-date">2023</span>
-                            <h3>Top Performer — C Fundamentals</h3>
-                            <p>Recognized as one of the top performers in the C Programming course at BAIUST.</p>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card glass reveal" data-reveal="fade-up" data-delay="300">
-                        <div class="achievement-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                        <div class="achievement-body">
-                            <span class="achievement-date">2023</span>
-                            <h3>Project Showcase</h3>
-                            <p>Presented beginner-level front-end projects including landing pages and web tools.</p>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card glass reveal" data-reveal="fade-up" data-delay="400">
-                        <div class="achievement-icon"><i class="fa-solid fa-award"></i></div>
-                        <div class="achievement-body">
-                            <span class="achievement-date">2022</span>
-                            <h3>Higher Secondary Excellence</h3>
-                            <p>Completed HSC in Science group with a strong academic result.</p>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card glass reveal" data-reveal="fade-up" data-delay="500">
-                        <div class="achievement-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <div class="achievement-body">
-                            <span class="achievement-date">Ongoing</span>
-                            <h3>CSE Undergraduate — BAIUST</h3>
-                            <p>Currently pursuing a B.Sc. in Computer Science &amp; Engineering at BAIUST, Comilla.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ===================== PROJECTS SECTION ===================== -->
-        <section class="section projects" id="projects">
-            <div class="container">
-                <div class="section-head reveal" data-reveal="fade-up">
-                    <h2 class="section-title">My <span class="accent">Work</span></h2>
-                    <p class="section-sub">A selection of projects I've built while learning and growing.</p>
-                </div>
-
-                <div class="projects-grid">
-                    <!-- Project 1: HealthCare helpCenter -->
-                     <article class="project-card reveal" data-reveal="fade-up">
-                        <div class="project-image">
-                            <img src="pic/img.png" alt="Gear Up Moto — Django full-stack website" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%230f172a%22/%3E%3Cstop offset=%221%22 stop-color=%22%23ea580c%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22600%22 height=%22400%22 fill=%22url(%23g)%22/%3E%3Ctext x=%22300%22 y=%22220%22 font-size=%2240%22 font-family=%22Outfit,sans-serif%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22%3EGear Up Moto%3C/text%3E%3C/svg%3E';" />
-                            <span class="project-live-badge"><span class="live-dot"></span> LIVE</span>
-                            <div class="project-overlay">
-                                <div class="project-overlay-icons">
-                                    <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" aria-label="View code"><i class="fa-brands fa-github"></i></a>
-                                    <a href="https://gearupmotocumilla.com/" target="_blank" rel="noopener" aria-label="Visit live site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <h3 class="project-title">Gear Up Moto <span class="project-flagship">Full-Stack</span></h3>
-                            <p class="project-desc">A full-stack e-commerce + service-booking website for a motorcycle parts and servicing business in Cumilla. Built with Django on the backend, featuring a product catalog, shopping cart, checkout, and a service-booking system.</p>
-                            <div class="project-tags">
-                                <span>Django</span>
-                                <span>Python</span>
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Database</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://gearupmotocumilla.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                                    <i class="fa-solid fa-up-right-from-square"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
-                                    <i class="fa-brands fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="project-card reveal" data-reveal="fade-up">
-                        <div class="project-image">
-                            <img src="pic/image1.png" alt="HealthCare helpCenter project" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%2310b981%22/%3E%3Cstop offset=%221%22 stop-color=%22%230ea5e9%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22600%22 height=%22400%22 fill=%22url(%23g)%22/%3E%3Ctext x=%22300%22 y=%22220%22 font-size=%2248%22 font-family=%22Outfit,sans-serif%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22%3EHealthCare%3C/text%3E%3C/svg%3E';" />
-                            <div class="project-overlay">
-                                <div class="project-overlay-icons">
-                                    <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" aria-label="View code"><i class="fa-brands fa-github"></i></a>
-                                    <a href="#" target="_blank" rel="noopener" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <h3 class="project-title">HealthCare helpCenter</h3>
-                            <p class="project-desc">A responsive help-center web page for a healthcare service, featuring information sections, FAQs, and clean modern UI.</p>
-                            <div class="project-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                                    <i class="fa-solid fa-up-right-from-square"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
-                                    <i class="fa-brands fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 2: Color Palette Generator -->
-                    <article class="project-card reveal" data-reveal="fade-up" data-delay="150">
-                        <div class="project-image">
-                            <img src="pic/image2.png" alt="Color Palette Generator project" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22150%22 height=%22400%22 fill=%22%23ef4444%22/%3E%3Crect x=%22150%22 width=%22150%22 height=%22400%22 fill=%22%23f59e0b%22/%3E%3Crect x=%22300%22 width=%22150%22 height=%22400%22 fill=%22%2310b981%22/%3E%3Crect x=%22450%22 width=%22150%22 height=%22400%22 fill=%22%2319c6a0%22/%3E%3Ctext x=%22300%22 y=%22220%22 font-size=%2236%22 font-family=%22Outfit,sans-serif%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22%3EColor Palette%3C/text%3E%3C/svg%3E';" />
-                            <div class="project-overlay">
-                                <div class="project-overlay-icons">
-                                    <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" aria-label="View code"><i class="fa-brands fa-github"></i></a>
-                                    <a href="#" target="_blank" rel="noopener" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <h3 class="project-title">Color Palette Generator</h3>
-                            <p class="project-desc">A vanilla JS tool that generates random color palettes, lets users copy hex codes, and lock favorites in place.</p>
-                            <div class="project-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                                    <i class="fa-solid fa-up-right-from-square"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
-                                    <i class="fa-brands fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 3: Modern Landing Page -->
-                    <article class="project-card reveal" data-reveal="fade-up" data-delay="300">
-                        <div class="project-image">
-                            <img src="pic/image3.png" alt="Modern Landing Page project" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%238b5cf6%22/%3E%3Cstop offset=%221%2２ stop-color=%２２%２３ec4899%２２/%３E%３C/linearGradient%３E%３C/defs%３E%３Crect width=%２２600%２２ height=%２２400%２２ fill=%２２url(%２３g)%２２/%３E%３Ctext x=%２２300%２２ y=%２２220%２２ font-size=%２２40%２₂ font-family=%２₂Outfit,sans-serif%２₂ font-weight=%２₂800%２₂ fill=%２₂white%１₂ text-anchor=%１₂middle%１₂%３ELanding Page%３C/text%３E%３C/svg%３E';" />
-                            <div class="project-overlay">
-                                <div class="project-overlay-icons">
-                                    <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" aria-label="View code"><i class="fa-brands fa-github"></i></a>
-                                    <a href="#" target="_blank" rel="noopener" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <h3 class="project-title">Modern Landing Page</h3>
-                            <p class="project-desc">A clean, modern, fully responsive landing page with hero section, smooth scrolling, and animated UI elements.</p>
-                            <div class="project-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                                    <i class="fa-solid fa-up-right-from-square"></i> Live Demo
-                                </a>
-                                <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
-                                    <i class="fa-brands fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ===================== CONTACT SECTION ===================== -->
-        <section class="section contact" id="contact">
-            <div class="container">
-                <div class="section-head reveal" data-reveal="fade-up">
-                    <span class="section-tag">05 — Contact</span>
-                    <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
-                    <p class="section-sub">Have a project, a question, or just want to say hi? Drop a message!</p>
-                </div>
-
-                <div class="contact-grid">
-                    <!-- Left: contact info cards -->
-                    <div class="contact-info">
-                        <h3 class="reveal" data-reveal="fade-right">Let's talk!</h3>
-                        <p class="reveal" data-reveal="fade-right" data-delay="100">
-                            I'm always open to discussing new projects, creative ideas, or opportunities
-                            to be part of your vision. Use the form or reach me directly below.
-                        </p>
-
-                        <a href="mailto:abuayubminhaz290@gmail.com" class="contact-card glass reveal" data-reveal="fade-right" data-delay="200">
-                            <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div class="contact-card-body">
-                                <span>Email</span>
-                                <strong>abuayubminhaz290@gmail.com</strong>
-                            </div>
-                        </a>
-
-                        <a href="tel:+8801406785952" class="contact-card glass reveal" data-reveal="fade-right" data-delay="300">
-                            <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div class="contact-card-body">
-                                <span>Phone</span>
-                                <strong>+880 1406-785952</strong>
-                            </div>
-                        </a>
-
-                        <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" class="contact-card glass reveal" data-reveal="fade-right" data-delay="400">
-                            <div class="contact-card-icon"><i class="fa-brands fa-github"></i></div>
-                            <div class="contact-card-body">
-                                <span>GitHub</span>
-                                <strong>github.com/Ayub-BD</strong>
-                            </div>
-                        </a>
-
-                        <a href="https://www.google.com/maps?q=Comilla,Bangladesh" target="_blank" rel="noopener" class="contact-card glass reveal" data-reveal="fade-right" data-delay="500">
-                            <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
-                            <div class="contact-card-body">
-                                <span>Location</span>
-                                <strong>Comilla, Bangladesh</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Right: contact form (powered by EmailJS) -->
-                    <div class="contact-form-wrap reveal" data-reveal="fade-left">
-                        <form id="contact-form" class="contact-form glass">
-                            <h3>Send me a message</h3>
-
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="from_name" placeholder="John Doe" required />
-                                <small class="error-msg" id="name-error"></small>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" name="from_email" placeholder="john@example.com" required />
-                                <small class="error-msg" id="email-error"></small>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-                                <small class="error-msg" id="message-error"></small>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
-                                <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
-                                <span class="btn-loader" aria-hidden="true"></span>
-                            </button>
-
-                            <!-- Success / error feedback message -->
-                            <div class="form-feedback" id="form-feedback" aria-live="polite"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="footer">
-        <div class="container footer-inner">
-            <div class="footer-name">
-                <span class="logo-mark">A</span>
-                <span>Abu Ayub Bhuiyan</span>
-            </div>
-
-            <div class="footer-social">
-                <a href="https://github.com/Ayub-BD" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="mailto:abuayubminhaz290@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-
-            <p class="footer-copy">
-                © <span id="year"></span> Abu Ayub Bhuiyan. All rights reserved.
-            </p>
-
-            <nav class="footer-nav" aria-label="Footer navigation">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </footer>
-
-    <!-- Back to top button -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-
-    <!-- My scripts -->
-    <script src="script.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
